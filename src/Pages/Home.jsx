@@ -1,7 +1,7 @@
 import Countries from '../components/Countries'
 import '../index.css'
 import { useState, useEffect } from 'react'
-import { fetchCountries } from '../services/api'
+import { fetchCountries } from '../Services/api'
 
 function Home() {
   const [countryData, setCountryData] = useState()
