@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+body {
+  background-color: hsl(0, 0%, 99%);
+}
+body.dark-theme {
+  background: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+/* loader */
+.loader {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 5rem;
+}
+
+/* Header Section starts here */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  height: 10rem;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+body.dark-theme .header {
+  background: hsl(209, 23%, 22%);
+  box-shadow: hsl(207, 26%, 17%) 0px 8px 24px;
+  color: hsl(0, 0%, 100%);
+}
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 2rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.moon {
+  font-size: 2rem;
+}
+
+/* search area starts here */
+.searchBox {
+  max-width: 1750px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  margin: 3rem auto 0 auto;
+}
+.searchBox input {
+  height: 5rem;
+  padding: 1rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  border-radius: 3px;
+}
+.searchBox input::placeholder {
+  color: inherit;
+}
+/* for darkmode colors */
+body.dark-theme .searchBox input,
+body.dark-theme select {
+  background: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+select {
+  padding: 1rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+
+/* country container */
+.containner {
+  max-width: 1750px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+  margin: 4rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.countryCard {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  color: hsl(200, 15%, 8%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+body.dark-theme .countryCard {
+  background: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+.countryCard img {
+  height: 200px;
+  width: 100%;
+}
+.details {
+  margin: 2rem;
+}
+.details h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.details span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+.details p {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+/* media queris */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .searchBox {
+    flex-direction: column;
+
+    align-items: flex-start;
+    row-gap: 4rem;
+  }
+  .searchBox input {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+}
