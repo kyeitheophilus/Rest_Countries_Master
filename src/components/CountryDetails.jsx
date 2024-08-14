@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './country.css'
-import { fetchCountryDetails, fetchBorderCountryNames } from '../services/api'
+import { fetchCountryDetails, fetchBorderCountryNames } from '../Services/api'
 
 function CountryDetails() {
   const [data, setData] = useState()
